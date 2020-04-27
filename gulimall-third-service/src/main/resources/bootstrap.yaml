@@ -1,0 +1,14 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: third-service
+  cloud:
+    nacos:
+      config:
+        server-addr: http://localhost:8848
+        namespace: 7df98a49-64f7-4d4e-b2c9-f53e7f00b5f2
+        extension-configs:
+          - dataId: oss.yaml
+            group: DEFAULT_GROUP
+            refresh: true

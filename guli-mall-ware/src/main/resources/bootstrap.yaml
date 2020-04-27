@@ -1,0 +1,25 @@
+server:
+  port: 8400
+spring:
+  application:
+    name: ware-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.239.131:3306/gulimall_wms?serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 #nacos-server的地址
+      config:
+        server-addr: localhost:8848 #nacos-server的地址
+        namespace: 26b9d5d8-2362-42e9-81ac-8309adc9d7b2
+        file-extension: yaml
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+mybatis-plus:
+  mapper-locations: classpath:mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
